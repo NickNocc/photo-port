@@ -26,4 +26,20 @@ function App() {
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
+      <main>
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
+      </main>
+    </div>
+  );
+}
 
+export default App;
